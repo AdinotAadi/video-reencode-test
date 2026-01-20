@@ -118,7 +118,7 @@ self.onmessage = async (event: MessageEvent<WorkerRequest>) => {
       ]);
 
       const out = await ffmpeg.readFile(req.outputName);
-      const outBuf = (out as Uint8Array).buffer.slice(0);
+      const outBuf = new Uint8Array(out as Uint8Array).buffer;
 
       await ffmpeg.deleteFile("list.txt");
       for (const seg of req.segments) await ffmpeg.deleteFile(seg.name);
@@ -144,7 +144,7 @@ self.onmessage = async (event: MessageEvent<WorkerRequest>) => {
       await ffmpeg.exec(["-i", req.inputName, ...req.args, req.outputName]);
 
       const out = await ffmpeg.readFile(req.outputName);
-      const outBuf = (out as Uint8Array).buffer.slice(0);
+      const outBuf = new Uint8Array(out as Uint8Array).buffer;
 
       await ffmpeg.deleteFile(req.inputName);
       await ffmpeg.deleteFile(req.outputName);
