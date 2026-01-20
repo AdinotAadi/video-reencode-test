@@ -1,0 +1,53 @@
+{
+  "title": "Video size test report (MP4 only)",
+  "run": {
+    "timestamp": "2026-01-20T05:35:15.624Z",
+    "runId": "1768887287374-76acfd9ea7e7f",
+    "description": "Recorded 4 short videos (~20 seconds total), merged them, then re-encoded to H.264 MP4 and measured size/time."
+  },
+  "inputs": {
+    "segmentCount": 4,
+    "segmentDurationMs": 5000,
+    "gapMs": 250
+  },
+  "sizes": {
+    "segmentsBytes": [1053748, 1021145, 1047578, 1063352],
+    "segmentsTotalBytes": 4185823,
+    "mergedBytes": 4185179,
+    "mp4Bytes": 338660,
+    "segmentsHuman": ["1.00 MB", "997.21 KB", "1023.03 KB", "1.01 MB"],
+    "segmentsTotalHuman": "3.99 MB",
+    "mergedHuman": "3.99 MB",
+    "mp4Human": "330.72 KB"
+  },
+  "timingMs": {
+    "recordMs": 20815,
+    "mergeMs": 167,
+    "mp4Ms": 7264,
+    "totalMs": 28250
+  },
+  "timingHuman": {
+    "recordS": 20.815,
+    "mergeS": 0.167,
+    "mp4S": 7.264,
+    "totalS": 28.25
+  },
+  "results": {
+    "reductionPercent": 91.91,
+    "compressionFactorApprox": 12.36,
+    "summary": "MP4 output is ~12× smaller than the merged WebM (91.91% reduction). MP4 encoding took ~7.26 seconds after merging."
+  },
+  "charts": {
+    "sizeComparison": {
+      "unit": "MB",
+      "merged": 3.99,
+      "mp4": 0.33
+    },
+    "timeBreakdown": {
+      "unit": "seconds",
+      "recording": 20.8,
+      "merge": 0.17,
+      "mp4": 7.26
+    }
+  }
+}

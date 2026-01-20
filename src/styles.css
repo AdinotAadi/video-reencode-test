@@ -1,0 +1,89 @@
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+body {
+  margin: 0;
+  background: #0b0c0f;
+  color: #e9eaee;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #141622;
+  border: 1px solid #22253a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+button {
+  background: #2b58ff;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: #2a2f45;
+}
+
+.danger {
+  background: #c0392b;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  background: #0f1120;
+  border: 1px solid #22253a;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+video {
+  width: 100%;
+  max-height: 360px;
+  background: black;
+  border-radius: 12px;
+  border: 1px solid #22253a;
+}
+
+.small {
+  color: #b6b8c3;
+  font-size: 13px;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #22253a;
+  margin: 14px 0;
+}
